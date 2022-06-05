@@ -1,0 +1,53 @@
+.profile {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px);
+    padding: 5px 30px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+
+    &__wrapper {
+        background-color: #F1F6FB;
+        max-width: 450px;
+        width: 100%;
+
+        &--dark {
+            background-color: #293145;
+        }
+    }
+
+    &__topic {
+        color: #2E3849;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        animation: appearProfileTopic .8s;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+    }
+}
+
+@keyframes appearProfileTopic {
+    from {
+        margin-left: -100px;
+    }
+    to {
+        margin-left: 0;
+    }
+}

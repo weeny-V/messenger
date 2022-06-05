@@ -1,0 +1,46 @@
+.recent-users {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    margin: 0 30px 25px 30px;
+    max-width: 400px;
+    box-sizing: border-box;
+    list-style: none;
+    animation: appearChatRecentUsers .8s;
+
+    &__user {
+        margin-right: 10px;
+        flex: 1;
+        max-width: 47px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__image {
+        width: 43px;
+        height: 43px;
+    }
+
+    &__name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        color: #728096;
+        margin: 0;
+    }
+}
+
+@keyframes appearChatRecentUsers {
+    from {
+        margin-left: -500px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 100%;
+    }
+}

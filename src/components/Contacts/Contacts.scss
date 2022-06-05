@@ -1,0 +1,89 @@
+.contact {
+    position: relative;
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 70px);
+    padding: 5px 0;
+
+    &__wrapper {
+        position: relative;
+        background-color: #F1F6FB;
+        width: 100%;
+        max-width: 450px;
+
+        &--dark {
+            background-color: #293145;
+        }
+    }
+
+    &__topic {
+        color: #2E3849;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+        animation: appearGroupTopic .8s;
+        margin: 0 30px 20px 30px;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+    }
+
+    &__buttons {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 0 30px 25px 30px;
+        animation: appearContactSearch .8s;
+    }
+
+    &__search {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 10px 50px 10px 10px;
+        width: 100%;
+        color: #DEE4EC;
+
+        &--dark {
+            background-color: #313A55;
+            border-color: #313A55;
+            color: #DEE4EC;
+        }
+
+        &:focus {
+            outline: 2px solid #3B8DF5;
+        }
+
+        &::placeholder {
+            color: #A0AEC0;
+        }
+    }
+
+    &__submit {
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        margin-left: -40px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@keyframes appearContactSearch {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 100%;
+    }
+}

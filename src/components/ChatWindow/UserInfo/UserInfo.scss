@@ -1,0 +1,157 @@
+.user-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 900px;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0 0 5.3px rgba(0, 0, 0, 0.028),
+    0 0 17.9px rgba(0, 0, 0, 0.042);
+
+
+    &--dark {
+        background-color: #232A3B;
+    }
+
+    &__image {
+        width: 43px;
+        height: 43px;
+        margin-right: 20px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        color: #2E3849;
+        margin: 0 0 5px 0;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+    }
+
+    &__online {
+        margin: 0;
+        color: #728096;
+    }
+
+    &__buttons {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    &__label {
+        display: flex;
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-right: 20px;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+
+    &__upload {
+        background-image: url("../../../assets/camera.png");
+    }
+
+    &__voice {
+        background-image: url("../../../assets/microphone.png");
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__else {
+        position: relative;
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.15);
+        }
+
+        &:hover + .user-info__popUp {
+            display: flex;
+            animation: bubble .8s;
+        }
+    }
+
+    &__icon {
+        width: 15px;
+        height: 20px;
+    }
+
+    &__popUp {
+        position: absolute;
+        top: -15px;
+        right: -75px;
+        background-color: #fff;
+        border-radius: 7px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        display: none;
+
+        &--dark {
+            background-color: #313A55;
+        }
+
+        &:hover {
+            display: flex;
+            background-color: #4E98F6;
+        }
+
+        &-noMargin {
+            white-space: nowrap;
+            margin: 0;
+            padding: 7px;
+            font-size: .875rem;
+            line-height: 1.25rem;
+            letter-spacing: .03rem;
+            font-weight: 500;
+            border: none;
+            background-color: transparent;
+
+            &--dark {
+                color: #E1E7EF;
+            }
+
+            &:hover {
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+@keyframes bubble {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: -15px;
+        opacity: 100%;
+    }
+}
+
+
+

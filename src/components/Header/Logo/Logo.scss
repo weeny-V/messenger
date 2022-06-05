@@ -1,0 +1,39 @@
+.header {
+    &__logo {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+
+        &-appear {
+            animation: appearLogo .8s;
+        }
+    }
+
+    &__image {
+        width: 32px;
+        height: 32px;
+        margin-right: 20px;
+    }
+
+    &__text {
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0;
+        color: #2E3849;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+    }
+}
+
+@keyframes appearLogo {
+    from {
+        margin-left: 600px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 100%;
+    }
+}

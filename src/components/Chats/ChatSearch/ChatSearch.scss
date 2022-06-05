@@ -1,0 +1,57 @@
+.search {
+    position: relative;
+    display: flex;
+    margin: 0 30px 15px 30px;
+    box-shadow:
+            0 0 5.3px rgba(0, 0, 0, 0.028),
+            0 0 17.9px rgba(0, 0, 0, 0.042),
+            0 0 80px rgba(0, 0, 0, 0.07);
+    animation: appearChatSearch .6s;
+
+    &__input {
+        width: 100%;
+        border: none;
+        padding: 5px 50px 5px 15px;
+        border-radius: 10px;
+
+        &--dark {
+            background-color: #313A55;
+            color: #E1E7EF;
+        }
+
+        &::placeholder {
+            color: #A0AEC0;
+        }
+
+        &:focus {
+            outline: 2px solid #4E98F6;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        width: 50px;
+        height: 50px;
+        margin-left: -50px;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__image {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@keyframes appearChatSearch {
+    from {
+        left: -100%;
+        opacity: 0;
+    }   to {
+    left: 0;
+    opacity: 100%;
+            }
+}

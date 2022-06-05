@@ -1,0 +1,304 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5.3px rgba(0, 0, 0, 0.028),
+    0 0 17.9px rgba(0, 0, 0, 0.042),
+    0 0 80px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 50px;
+    animation: appearRegisterForm .8s;
+
+    &--dark {
+        background-color: #313A55;
+    }
+
+    &__input-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 740px;
+    }
+
+    &__input {
+        width: 320px;
+        height: 25px;
+        margin-bottom: 20px;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 15px;
+
+        &--dark {
+            background-color: #232A3B;
+            border-color: #232A3B;
+            color: #9EACBE;
+        }
+
+        &:focus {
+            outline: 1px solid #4E98F6;
+        }
+    }
+
+    &__select {
+        width: 354px;
+        height: 50px;
+        margin-bottom: 20px;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 15px;
+        appearance: auto;
+
+        &--dark {
+            background-color: #232A3B;
+            border-color: #232A3B;
+            color: #9EACBE;
+        }
+
+        &--gender {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        &:focus {
+            outline: 2px solid #4E98F6;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+
+    &__secure {
+        flex: 1;
+        background-color: #EDF2F7;
+        margin-right: 10px;
+        height: 4px;
+        border-radius: 5px;
+
+        &--dark {
+            background-color: #232A3B;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &-green {
+            background-color: #14B981;
+        }
+    }
+
+    &__label {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 20px;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+    }
+
+    &__checkbox {
+        margin-right: 10px;
+    }
+
+    &__policy {
+        color: #90BFF9;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+
+    &__clue {
+        font-size: 14px;
+        color: #6e6e6e;
+        font-weight: 500;
+        margin-bottom: 10px;
+        cursor: context-menu;
+        display: flex;
+        position: relative;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+
+        &[title]:hover:after {
+            position: absolute;
+            content: 'The personal information part can contain the following ASCII characters: Uppercase and lowercase letters (A-Z and a-z) Numeric characters (0-9) Special characters - ! # $ % & \' * + - / = ? ^ _ ` { | } ~ Period, dot, or full stop (.) with the condition that it cannot be the first or last letter of the email and cannot repeat one after another.';
+            border-radius: 20px;
+            background-color: white;
+            max-width: 400px;
+            padding: 10px;
+            color: #707070;
+            top: 150%;
+            left: 0;
+            z-index: 10;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        padding: 5px 0;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    &__register-btn {
+        color: #fff;
+        background-color: #3C8DF5;
+        height: 42px;
+        margin-bottom: 15px;
+
+        &:hover {
+            background-color: #5199F6;
+            cursor: pointer;
+        }
+
+        &:disabled {
+            background-color: #3C8DF5;
+            cursor: auto;
+        }
+    }
+
+    &__sign-in {
+        border: 1px solid #e2e8f0;
+        background-color: transparent;
+
+        &:hover {
+            background-color: #F9FAFC;
+        }
+
+        &:active {
+            color: black;
+        }
+
+        &--dark {
+            border-color: #545C74;
+            color: #9EACBE;
+
+            &:hover {
+                background-color: #545C74;
+            }
+        }
+    }
+}
+
+.custom-checkbox {
+    position: relative;
+    top: 25px;
+    left: -2px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.custom-checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.custom-checkbox.checkbox-error + label::before {
+    border: 2px solid #ff4e4e;
+}
+
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+    border-color: #b3d7ff;
+}
+
+.custom-checkbox:not(:disabled):active + label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+.custom-checkbox:focus + label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.custom-checkbox:focus:not(:checked) + label::before {
+    border-color: #80bdff;
+}
+
+.custom-checkbox:checked + label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.custom-checkbox:disabled + label::before {
+    background-color: #e9ecef;
+}
+
+.checkbox {
+    margin-bottom: 1em;
+}
+
+.phone-container {
+    position: relative;
+    display: flex;
+}
+
+.phone-number {
+    width: 270px;
+    padding-left: 65px;
+}
+
+.phone-code {
+    position: absolute;
+    display: flex;
+    padding: 5px 10px;
+    width: 32px;
+    height: 34px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid #e2e8f0;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2e8f0;
+    margin-bottom: 20px;
+    font-weight: 500;
+
+    &--dark {
+        background-color: #232A3B;
+        border-color: #494c59;
+        color: #9EACBE;
+    }
+}
+
+@keyframes appearRegisterForm {
+    from {
+        margin-left: -600px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 100%;
+    }
+}

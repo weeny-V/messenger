@@ -1,0 +1,68 @@
+.avatar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 5.3px rgba(0, 0, 0, 0.028),
+    0 0 17.9px rgba(0, 0, 0, 0.042);
+    margin-bottom: 25px;
+    border-radius: 12px;
+    animation: appearProfileAvatar .8s;
+
+    &--dark {
+        background-color: #313A55;
+    }
+
+    &__edit {
+        position: absolute;
+        content: '';
+        width: 18px;
+        height: 18px;
+        top: 10px;
+        right: 10px;
+        background-image: url("../../../assets/AvatarEdit.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+
+    &__image {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin-bottom: 5px;
+        color: #2E3849;
+        font-weight: 500;
+
+        &--dark {
+            color: #C3CAD5;
+        }
+    }
+
+    &__status {
+        font-weight: 500;
+        color: #728096;
+    }
+}
+
+@keyframes appearProfileAvatar {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 100%;
+    }
+}

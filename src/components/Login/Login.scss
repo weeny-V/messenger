@@ -1,0 +1,36 @@
+.login {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1F6FB;
+    z-index: 10;
+
+    &--dark {
+        background-color: #293145;
+    }
+
+    &__text {
+        color: #4C576A;
+        font-size: 30px;
+        margin-bottom: 30px;
+        animation: appearLoginText .8s;
+
+        &--dark {
+            color: #E0E6EF;
+        }
+    }
+}
+
+@keyframes appearLoginText {
+    from {
+        margin-left: 600px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,136 @@
+.details {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    overflow: auto;
+    animation: appearGroupDetails .8s;
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+
+    &--dark {
+        background-color: #313A55;
+    }
+
+    &__label {
+        margin-bottom: 10px;
+
+        &--dark {
+            color: #CED5DF;
+        }
+
+        &-upload {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px 10px;
+            margin-bottom: 20px;
+            color: #293145;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #F7FAFC;
+            }
+
+            &--dark {
+                background-color: #232A3B;
+                border-color: #232A3B;
+
+                &:hover {
+                    background-color: #293145;
+                }
+            }
+        }
+    }
+
+    &__text {
+        margin: 0;
+        color: #718096;
+    }
+
+    &__input {
+        margin-bottom: 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 5px 10px;
+        min-height: 25px;
+
+        &--dark {
+            background-color: #232A3B;
+            border-color: #232A3B;
+            color: #C5CBD2;
+        }
+
+        &:focus {
+            outline: 2px solid #3B8DF5;
+        }
+    }
+
+    &__textarea {
+        margin-bottom: 20px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #e2e8f0;
+        min-height: 100px;
+
+        &--dark {
+            background-color: #232A3B;
+            border-color: #232A3B;
+            color: #C5CBD2;
+        }
+
+        &:focus {
+            outline: 2px solid #3B8DF5;
+        }
+    }
+
+    &__create {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        font-weight: 600;
+        min-height: 35px;
+        border-radius: 10px;
+        border: none;
+        background-color: #3B8DF5;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #5198F5;
+        }
+    }
+
+    &__upload {
+        display: none;
+    }
+}
+
+@keyframes appearGroupDetails {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 100%;
+    }
+}

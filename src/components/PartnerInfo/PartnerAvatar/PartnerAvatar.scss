@@ -1,0 +1,38 @@
+.partner-avatar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 5.3px rgba(0, 0, 0, 0.028),
+    0 0 17.9px rgba(0, 0, 0, 0.042);
+    margin-bottom: 25px;
+    border-radius: 12px;
+
+    &--dark {
+        background-color: #313A55;
+    }
+
+    &__image {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin-bottom: 5px;
+        color: #2E3849;
+        font-weight: 500;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+    }
+
+    &__status {
+        font-weight: 500;
+        color: #728096;
+    }
+}

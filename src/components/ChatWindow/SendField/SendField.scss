@@ -1,0 +1,99 @@
+.send {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 900px;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0 0 5.3px rgba(0, 0, 0, 0.028),
+    0 0 17.9px rgba(0, 0, 0, 0.042);
+
+    &--dark {
+        background-color: #232A3B;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__upload {
+        display: flex;
+        width: 15px;
+        height: 15px;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../../../assets/close.png");
+        background-color: transparent;
+        transform: rotate(-45deg);
+        margin-right: 20px;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1) rotate(-45deg);
+        }
+    }
+
+    &__textField {
+        height: 35px;
+        padding: 5px 10px;
+        flex: 1;
+        border: none;
+        border-radius: 10px;
+        background-color: transparent;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+
+        &:focus {
+            outline: 2px solid #4B93ED;
+        }
+
+        &::placeholder {
+            color: #78869B;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    &__smile {
+        width: 20px;
+        height: 20px;
+        margin: 0 20px 0 10px;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+
+    &__submitBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #3B8DF5;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+
+    &__sendIcon {
+        width: 20px;
+        height: 20px;
+    }
+}

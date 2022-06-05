@@ -1,0 +1,122 @@
+.group {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px);
+    padding: 5px 30px;
+    overflow-y: auto;
+
+    &__wrapper {
+        background-color: #F1F6FB;
+        max-width: 450px;
+        width: 100%;
+
+        &--dark {
+            background-color: #293145;
+        }
+    }
+
+    &__topic {
+        color: #2E3849;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        animation: appearGroupTopic .8s;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+    }
+
+    &__buttons {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        animation: appearGroupButtons .8s;
+
+        &--dark {
+            background-color: #313A56;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background-color: white;
+        flex: 1;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        text-decoration: none;
+        color: #293145;
+
+        &:active {
+            color: black;
+        }
+
+        &:hover {
+            background-color: #F7FAFC;
+        }
+
+        &--dark {
+            background-color: transparent;
+            color: #E1E7EF;
+
+            &:hover {
+                background-color: #232A3B;
+            }
+
+            &:active {
+                color: #E1E7EF;
+            }
+        }
+
+        &-active {
+            background-color: #3B8DF5;
+            color: white;
+
+            &:active {
+                color: white;
+            }
+
+            &:hover {
+                background-color: #3B8DF5;
+                color: white;
+            }
+        }
+    }
+
+    &__member {
+        margin-right: 5px;
+    }
+}
+
+@keyframes appearGroupTopic {
+    from {
+        margin-left: -500px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 100%;
+    }
+}
+
+@keyframes appearGroupButtons {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 100%;
+    }
+}

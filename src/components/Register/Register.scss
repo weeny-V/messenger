@@ -1,0 +1,64 @@
+.register {
+    background-color: #F1F6FB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+
+    &--dark {
+        background-color: #293145;
+    }
+
+    &__text {
+        color: #4C576A;
+        font-size: 26px;
+        margin-bottom: 30px;
+        animation: appearRegisterText .8s;
+
+        &--dark {
+            color: #6C7484;
+        }
+
+        &-underline {
+            margin-top: auto;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 400;
+        }
+    }
+
+    &__rules {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        font-weight: 400;
+        animation: appearRegisterRules .8s;
+
+        &--dark {
+            color: #E0E6EF;
+        }
+    }
+}
+
+@keyframes appearRegisterText {
+    from {
+        margin-left: 600px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 100%;
+    }
+}
+
+@keyframes appearRegisterRules {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}

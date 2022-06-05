@@ -1,0 +1,48 @@
+.chats {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px);
+    padding: 5px 0;
+
+    &__wrapper {
+        background-color: #F1F6FB;
+        max-width: 450px;
+        width: 100%;
+
+        &--dark {
+            background-color: #293145;
+        }
+    }
+
+    &__topic {
+        color: #2E3849;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        animation: appearChatTopic .6s;
+        padding: 0 30px;
+
+        &--dark {
+            color: #E1E7EF;
+        }
+
+        &-3 {
+            font-size: 1rem;
+            line-height: 1.25rem;
+            animation: appearChatTopic 1s;
+        }
+    }
+}
+
+@keyframes appearChatTopic {
+    from {
+        margin-left: -500px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 100%;
+    }
+}
