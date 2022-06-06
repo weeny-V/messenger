@@ -12,7 +12,7 @@ const RegisterContainer = (): JSX.Element => {
         const auth = getAuth();
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                navigate('/chat')
+                navigate('/messenger/chat')
             }
         });
     }, [])

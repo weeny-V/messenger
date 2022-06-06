@@ -18,7 +18,7 @@ function Sidebar( { darkMode, signOutProcess, changePrevPath }: SidebarInterface
                     <NavLink className={( { isActive } ) => isActive
                         ? `sidebar__link-active`
                         : `${darkMode ? 'sidebar__link--dark' : ''} sidebar__link`}
-                             to='/chat'
+                             to='/messenger/chat'
                              onClick={() => changePrevPath('chat')}
                     >
                         <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'
@@ -36,7 +36,7 @@ function Sidebar( { darkMode, signOutProcess, changePrevPath }: SidebarInterface
                     <NavLink className={( { isActive } ) => isActive
                         ? 'sidebar__link-active'
                         : `${darkMode && 'sidebar__link--dark'} sidebar__link`}
-                             to='/groups'
+                             to='/messenger/groups'
                              onClick={() => changePrevPath('groups')}
                     >
                         <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'
@@ -54,7 +54,7 @@ function Sidebar( { darkMode, signOutProcess, changePrevPath }: SidebarInterface
                     <NavLink className={( { isActive } ) => isActive
                         ? 'sidebar__link-active'
                         : `${darkMode && 'sidebar__link--dark'} sidebar__link`}
-                             to='/contact'
+                             to='/messenger/contact'
                              onClick={() => changePrevPath('contact')}
                     >
                         <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'
@@ -74,7 +74,7 @@ function Sidebar( { darkMode, signOutProcess, changePrevPath }: SidebarInterface
                     <NavLink className={( { isActive } ) => isActive
                         ? 'sidebar__link-active'
                         : `${darkMode && 'sidebar__link--dark'} sidebar__link`}
-                             to='/profile'
+                             to='/messenger/profile'
                              onClick={() => changePrevPath('profile')}
                     >
                         <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'
@@ -92,7 +92,7 @@ function Sidebar( { darkMode, signOutProcess, changePrevPath }: SidebarInterface
                     <NavLink className={( { isActive } ) => isActive
                         ? 'sidebar__link-active'
                         : `${darkMode && 'sidebar__link--dark'} sidebar__link`}
-                             to='/settings'
+                             to='/messenger/settings'
                              onClick={() => changePrevPath('settings')}
                     >
                         <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'
@@ -109,7 +109,7 @@ function Sidebar( { darkMode, signOutProcess, changePrevPath }: SidebarInterface
                 </li>
                 <li className='sidebar__item'>
                     <NavLink className='sidebar__link'
-                             to='/register'
+                             to='/messenger/login'
                              onClick={() => {
                                  changePrevPath('chat')
                                  signOutProcess()

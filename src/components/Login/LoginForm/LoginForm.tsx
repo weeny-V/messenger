@@ -50,7 +50,7 @@ function LoginForm( { darkMode, handleSignIn, resetPassword }: LoginFormInterfac
                     onClick={() => handleSignIn( checkbox, email, password )}
             >Login
             </button>
-            <Link to='/register' className={`${darkMode ? 'login-form__sign-up--dark' : ''} login-form__sign-up`}
+            <Link to='/messenger/register' className={`${darkMode ? 'login-form__sign-up--dark' : ''} login-form__sign-up`}
             >Sign Up
             </Link>
             {

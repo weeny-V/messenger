@@ -40,7 +40,8 @@ interface GeneratorLoggedInterface {
     phone: string;
     country: string;
     darkMode: boolean;
-    friends: Array<string>
+    friends: Array<string>;
+    photo: string;
 }
 
 interface AcceptFriendType {
@@ -97,7 +98,8 @@ function* getLoggedUser( { payload }: PayloadAction<string> ) {
                 country: user.country,
                 darkMode: user.darkMode,
                 gender: user.gender,
-                friends: [...user.friends]
+                friends: [...user.friends],
+                photo: user.photo
             }
         } )
         yield put( setLoading( false ) )

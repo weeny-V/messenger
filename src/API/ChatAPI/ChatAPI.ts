@@ -1,5 +1,6 @@
 import { collection, doc, getDoc, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase';
+import { SettingsAPI } from '../SettingsAPI/SettingsApi';
 
 interface ChatListInterface {
     chatId: string,
@@ -39,15 +40,16 @@ export const ChatAPI = {
                 ? doc( db, 'profile', elem.id )
                 : doc( db, 'profile', elem.id[0], 'chats', elem.chatId )
             const data = await getDoc( userRef )
+            // const url = await SettingsAPI.getAvatarURL( elem.id )
             if (data.exists()) {
-                chatFullList.push( {
-                    timestamp: elem.timestamp,
-                    id: elem.id,
-                    lastMessage: elem.lastMessage,
-                    chatId: elem.chatId,
-                    name: data.data().name,
-                    photo: data.data().photo,
-                } )
+                    chatFullList.push( {
+                        timestamp: elem.timestamp,
+                        id: elem.id,
+                        lastMessage: elem.lastMessage,
+                        chatId: elem.chatId,
+                        name: data.data().name,
+                        photo: data.data().photo,
+                    } )
             }
         }
         return chatFullList

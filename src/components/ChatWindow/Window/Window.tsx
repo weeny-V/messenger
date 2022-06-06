@@ -39,6 +39,11 @@ function Window(): JSX.Element {
     const myId = useAppSelector( state => state.profile.id )
     const chatWindow = useRef<HTMLDivElement>( null )
     const { chatID } = useParams()
+    const scrollMessage = useRef<HTMLDivElement>(null)
+
+    function scrollBottom() {
+        scrollMessage.current?.scrollIntoView({ behavior: 'smooth', inline: 'end', block: 'end' })
+    }
 
     useEffect( () => {
         const refDB = ref( getDatabase() )
@@ -61,6 +66,10 @@ function Window(): JSX.Element {
             setMessages( prevState => [...prevState, data.val()] )
         } );
     }, [])
+
+    useEffect(() => {
+        scrollBottom()
+    }, [messages])
 
     return (
         <div className='window' ref={chatWindow}>
@@ -89,6 +98,7 @@ function Window(): JSX.Element {
                     </button>
                 </div>
             ) )}
+            <div ref={scrollMessage}/>
         </div>
     )
 }

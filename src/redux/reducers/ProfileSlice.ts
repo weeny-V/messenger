@@ -162,6 +162,7 @@ export const profileSlice = createSlice( {
             state.gender = action.payload.gender
             state.darkMode = action.payload.darkMode
             state.friends = action.payload.friends
+            state.photo = action.payload.photo
         },
         addFriend: (state, action:PayloadAction<string>) => {
             state.friends.push(action.payload)

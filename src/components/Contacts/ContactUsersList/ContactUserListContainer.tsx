@@ -45,6 +45,12 @@ const ContactUsersListContainer = ( { searchField }: ContactUserListInterface ):
     }, [id])
 
     useEffect(() => {
+        dispatch({type: 'GET_ALL_USERS', payload: id})
+        const list = userList.filter(user => user.id !== id)
+        setSearchResults(list)
+    }, [])
+
+    useEffect(() => {
         const results = userList.filter(user =>
             user.name.toLowerCase().includes(searchField.toLowerCase())
         );

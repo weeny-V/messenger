@@ -27,7 +27,9 @@ export const RegisterAPI = {
                     bio: '',
                     phone: phone,
                     country: country,
-                    password: password
+                    password: password,
+                    darkMode: false,
+                    friends: [],
                 })
             })
             .catch((error) => {

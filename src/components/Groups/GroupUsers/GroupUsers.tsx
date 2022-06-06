@@ -38,7 +38,7 @@ interface GroupUserInterface {
 const GroupUsers = ( { changeUserAddStatus, darkMode, groupUsersList, groupLoading }: GroupUserInterface ): JSX.Element => {
     const dispatch = useDispatch()
 
-    if (groupLoading || !groupUsersList) {
+    if (groupLoading) {
         return (
             <div className='group-spinner__container'>
                 <div className='group-spinner__loading'>
@@ -47,7 +47,7 @@ const GroupUsers = ( { changeUserAddStatus, darkMode, groupUsersList, groupLoadi
         )
     }
 
-    if (groupUsersList.length === 0) {
+    if (!groupUsersList || groupUsersList.length === 0 ) {
         return (
             <div className='no-friends'>
                 <p className='no-friends__text'>No Friends</p>
@@ -74,7 +74,7 @@ const GroupUsers = ( { changeUserAddStatus, darkMode, groupUsersList, groupLoadi
                     </div>
                 ) )}
             </div>
-            <Link to='/groups/details'
+            <Link to='/messenger/groups/details'
                   className='group-users__link'
                   onClick={() => dispatch(setPrevPath('group/details'))}
             >Next</Link>

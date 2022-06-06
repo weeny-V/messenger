@@ -222,7 +222,7 @@ function RegisterForm( {
                         validGender)}
             >Register
             </button>
-            <Link to='/login'
+            <Link to='/messenger/login'
                   className={`${darkMode ? 'register-form__sign-in--dark' : ''} register-form__btn register-form__sign-in`}
             >Sign in</Link>
         </form>

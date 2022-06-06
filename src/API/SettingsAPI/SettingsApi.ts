@@ -33,20 +33,20 @@ export const SettingsAPI = {
                         const path = URL.createObjectURL( file )
                         dispatch( { type: 'profile/setPhoto', payload: path } )
                         dispatch( setUpload( false ) )
+                        getDownloadURL( ref( storage, `avatars/${uid}` ) )
+                            .then( ( url ) => {
+                                if (url) {
+                                    updateDoc(firestoreRef, {
+                                        photo: url
+                                    })
+                                }
+                            } )
+                            .catch( ( error ) => {
+                                alert(error)
+                            } );
                         alert( 'Photo successfully updated' )
                     }
                 );
-                await getDownloadURL( ref( storage, `avatars/${uid}` ) )
-                    .then( ( url ) => {
-                        if (url) {
-                            updateDoc(firestoreRef, {
-                                photo: url
-                            })
-                        }
-                    } )
-                    .catch( ( error ) => {
-                        alert(error)
-                    } );
             }
         } );
     },

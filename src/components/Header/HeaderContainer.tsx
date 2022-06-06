@@ -9,7 +9,7 @@ import { setLoading } from '../../redux/reducers/MainSlice';
 const HeaderContainer = (): JSX.Element => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const { darkMode, friends } = useAppSelector( state => state.profile )
+    const { darkMode } = useAppSelector( state => state.profile )
 
     useEffect( () => {
         dispatch(setLoading(true))
@@ -17,10 +17,9 @@ const HeaderContainer = (): JSX.Element => {
         onAuthStateChanged( auth, ( user ) => {
             if (user) {
                 dispatch( { type: 'SET_USER_INFO', payload: user.uid } )
-                dispatch( { type: 'SET_PHOTO_REQUEST', payload: user.uid } )
-                dispatch({type: 'SET_CHATS', payload: user.uid})
+                // dispatch( { type: 'SET_PHOTO_REQUEST', payload: user.uid } )
             } else {
-                navigate( '/login' )
+                navigate( '/messenger/login' )
             }
         } )
     }, [] )

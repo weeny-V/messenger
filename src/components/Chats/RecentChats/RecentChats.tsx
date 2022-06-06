@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './RecentChats.scss';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { setCurrentChat } from '../../../redux/reducers/ProfileSlice';
-import { SettingsAPI } from '../../../API/SettingsAPI/SettingsApi';
-import { useAppDispatch, useAppSelector } from '../../../app/hooks';
-import Loading from '../../Loading/Loading';
+import { useAppSelector } from '../../../app/hooks';
 
 interface AvatarInterface {
     photo: string;

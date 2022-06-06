@@ -33,7 +33,7 @@ const ProfileAvatar = ( { darkMode, photo, status, name }: ProfileAvatarInterfac
             <Avatar photo={photo}/>
             <p className={`${darkMode ? 'avatar__name--dark' : ''} avatar__name`}>{name}</p>
             <span className='avatar__status'>{status !== null ? status : null}</span>
-            <div className='avatar__edit' onClick={() => navigate('/settings')}/>
+            <div className='avatar__edit' onClick={() => navigate('/messenger/settings')}/>
         </div>
     )
 }

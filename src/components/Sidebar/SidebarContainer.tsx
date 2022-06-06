@@ -14,7 +14,7 @@ const SidebarContainer = (): JSX.Element => {
     function signOutProcess() {
         const auth = getAuth();
         signOut( auth ).then( () => {
-            navigate( '/login' );
+            navigate( '/messenger/login' );
         } ).catch( ( error ) => {
             alert( error )
         } );

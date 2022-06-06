@@ -13,7 +13,7 @@ const LoginFormContainer = (): JSX.Element => {
         const auth = getAuth();
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                navigate('/chat')
+                navigate('/messenger/chat')
             }
         });
     }, [])
@@ -21,9 +21,9 @@ const LoginFormContainer = (): JSX.Element => {
     function handleSignIn(checkbox: boolean, email: string, password: string) {
         LoginAPI.setRememberMe(checkbox, email, password).then(data => {
             if(data) {
-                navigate('/chat')
+                navigate('/messenger/chat')
             } else {
-                navigate('/login')
+                navigate('/messenger/login')
             }
         })
     }

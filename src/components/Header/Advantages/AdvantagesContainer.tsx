@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import { child, get, getDatabase, onChildAdded, ref, remove, onChildRemoved } from 'firebase/database';
 import { realDB } from '../../../firebase';
 import { HeaderAPI } from '../../../API/HeaderAPI/HeaderAPI';
-import { ContactAPI } from '../../../API/ContactAPI/ContactAPI';
 
 const AdvantagesContainer = (): JSX.Element => {
     const dispatch = useDispatch();
